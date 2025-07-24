@@ -1,6 +1,6 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
-if (!import.meta.url) throw Error("NOT ESM!");
+if (!import.meta.dirname) throw Error("import.meta.dirname is not defined");
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
