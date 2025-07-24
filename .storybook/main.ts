@@ -1,8 +1,6 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
-console.log(`Node ${process.version}`);
-
-throw Error("force crash");
+if (!import.meta.url) throw Error("NOT ESM!");
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
